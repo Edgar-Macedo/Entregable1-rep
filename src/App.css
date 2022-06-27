@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+.App {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: 'Manrope';
+}
+.container{
+  padding-top: 1em;
+}
+
+.phraseContainer {
+  
+  padding: 7px;
+  font-weight: bold;
+  justify-content: right;
+  box-shadow: 5px 3px 10px 3px black;
+  margin: 18%;
+  font-family: 'Manrope';
+  font-size: 1.5em;
+  font-weight: lighter;
+  background-color:white;
+  min-width: 890px;
+  max-width: 890px;
+}
+
+.phraseContainer div {
+  display: flex;
+}
+
+#author{
+  text-align: right;
+  margin-right: 5px;
+  font-style: italic;
+
+}
+
+.phraseContainer div p{
+  flex-grow: 1;
+  text-align:  center;
+  padding: 0;
+  margin: 0;
+}
+
+.phraseContainer div h2{
+  font-size: 80px;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.nextRandQuote {
+  border-radius: 50%;  
+  width: 50px;
+  height: 50px;
+  font-size: .8em;
+  margin-left:90% ;
+  margin-bottom: 15px;
+  border:0;
+  color: white;
+}
