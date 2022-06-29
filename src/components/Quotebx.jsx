@@ -11,34 +11,29 @@ const Quotebx = () => {
 
     let randColor = Math.floor(Math.random()*colors.length)
     const [color, setColor] = useState(randColor)
+    
+    let randNumb = Math.floor(Math.random()*quotes.length) 
+    const [index,setIndex] = useState(randNumb)
 
-    const changeColor = () => {
-        let randColor = Math.floor(Math.random()*colors.length)
+    document.body.style.background = `${colors[color]}`
+    document.body.style.color = `${colors[color]}`
+
+
+    const change = () => {
+        randColor = Math.floor(Math.random()*colors.length)
         let indexColor = parseInt(randColor)
 
         setColor(indexColor)
 
-        document.body.style.background = `${colors[color]}`
-        document.body.style.color = `${colors[color]}`
+       
 
-        document.getElementById("buttonColor").style.background = `${colors[color]}`
-    }
+        randNumb = Math.floor(Math.random()*quotes.length)
 
-    
-    let randNumb = Math.floor(Math.random()*quotes.length)
-    
-    const [index,setIndex] = useState(randNumb)
-
-    const changeQuote = () => {
-        
         let indexNumber = parseInt(randNumb)
         setIndex(indexNumber)
-    } 
-
-    const handlerOnClick = () => {
-        changeColor()
-        changeQuote()
     }
+
+    
 
     return (
         <Card>
@@ -48,7 +43,7 @@ const Quotebx = () => {
 
             </div>
             <Text text= {quotes[index].author} id = "author"/>
-            <button onClick={handlerOnClick} className = "nextRandQuote" id='buttonColor' > <i className="fas fa-greater-than"></i>  </button>
+            <button onClick={change} className = "nextRandQuote" style={{color :`${colors[color]}`}}> <i className="fas fa-greater-than"></i>  </button>
         </Card>
     );
 };
